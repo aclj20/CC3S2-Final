@@ -59,7 +59,3 @@ jobs:
       - name: Push imagen Docker
         run: |
           docker push $DOCKER_IMAGE:${{ github.sha }}
-  
-  # Depende del job de tests
-    depends_on:
-      - tests
