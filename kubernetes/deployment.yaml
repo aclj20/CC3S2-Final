@@ -1,0 +1,23 @@
+apiversion: apps/v1
+kind: Deployment
+metadata:
+  name: proyecto-final
+  namespace: proyecto-fina
+
+spec:
+  # una replica por contenedor
+  replicas: 1
+  selector:
+    matchLabels:
+      app: proyecto-final
+  template:
+    metadata:
+      labels:
+        app: proyecto-final
+    spec:
+      containers:
+        - name: proyecto-final
+          # imagen del contenedor
+          image: proyecto-final:latest 
+          ports:
+            - containerPort: 80
