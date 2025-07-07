@@ -61,5 +61,5 @@ jobs:
           docker push $DOCKER_IMAGE:${{ github.sha }}
   
   # Depende del job de tests
-    depends-on:
+    depends_on:
       - tests
