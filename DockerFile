@@ -1,0 +1,16 @@
+FROM python:3.9-slim
+
+# directorio de trabajo
+WORKDIR /app
+
+# Copia el codigo 
+COPY . .
+
+# Dependencias necesarias
+RUN pip install --no-cache-dir -r requirements.txt
+
+# ejecuta el script principal
+CMD ["python", "app.py"]
+
+
+
