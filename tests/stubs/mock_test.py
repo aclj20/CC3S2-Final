@@ -23,7 +23,4 @@ class FakeExternalAnalyzer:
         c = ExternalAnalyzer()
         assert(c.search_api() == fake_response)
     
-@pytest.fixture
-def analyzer_mock():
-        return create_autospec(ExternalAnalyzer, instance=True)
     
